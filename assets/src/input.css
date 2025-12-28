@@ -169,8 +169,26 @@
 
 /* ================= Basic Style ====================== */
 @theme{
+    /* Font Family */
     --font-roboto: 'Roboto', sans-serif;
     --font-poppins: 'Poppins', sans-serif;
+
+    /* Color Palette */
+    --color-primary: #012E41;
+    --color-secondary: #F6F6F6;
+    --color-body: #345867;
+    --color-orange:#FA7335;
+    --color-orange-2:##FFD482;
+    --color-white-200:#F4F4F6;
+    --color-border:#E9E9E9;
+    --color-primary-bg: rgba(1, 46, 65, 0.80);
+    
+    /* Gradient */
+    --background-image-gradient: rgba(255, 255, 255, 0.75);
+    /* Custom Font Size */
+    --text-64x:4rem;
+    --text-48x:3rem;
+    --text-34x:2.125rem;
 }
 
 .container {
