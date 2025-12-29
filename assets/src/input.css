@@ -176,12 +176,14 @@
     /* Color Palette */
     --color-primary: #012E41;
     --color-secondary: #F6F6F6;
+    --color-2: #26A59E;
     --color-body: #345867;
     --color-orange:#FA7335;
     --color-orange-2:##FFD482;
     --color-white-200:#F4F4F6;
     --color-border:#E9E9E9;
     --color-primary-bg: rgba(1, 46, 65, 0.80);
+    --color-secondary-bg: rgba(0, 0, 0, 0.65);
     
     /* Gradient */
     --background-image-gradient: rgba(255, 255, 255, 0.75);
@@ -189,6 +191,11 @@
     --text-64x:4rem;
     --text-48x:3rem;
     --text-34x:2.125rem;
+
+    /* Custom shadow */
+    --inset-shadow-primary: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    /* Custom Blur */
+    --blur-primary:2.5px;
 }
 
 .container {
@@ -197,7 +204,7 @@
 
 @layer base {
   body {
-    @apply font-roboto;
+    @apply font-roboto not-italic;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-poppins;
@@ -205,7 +212,37 @@
 }
 /* ================= Component Style ====================== */
 @layer components {
-  .btn {
-    @apply px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700;
-  }
+
 }
+
+
+/*==================== Header Section ==========================*/
+header {
+    @apply py-5  bg-gradient inset-shadow-primary;
+    backdrop-filter: blur(2.5px);
+}
+.site-logo a img {
+    aspect-ratio: 47/18;
+}
+.mainmenu ul{
+    @apply flex;
+}
+.mainmenu ul li a {
+    @apply p-2 text-secondary-bg text-sm  leading-6 transition-all duration-300 ease-in-out  hover:text-orange;
+}
+.header-btn a {
+    @apply text-white text-sm leading-6 font-normal py-2.25 px-5.25 bg-2 inline-block border-1 border-2 rounded-sm transition-all duration-300 ease-in-out hover:bg-white hover:text-2 hover:border-2 hover:border-2; 
+}
+
+/*==================== Mobile Menu ==========================*/
+.mobile-menu ul li a{
+    @apply text-secondary-bg text-sm  leading-6 transition-all duration-300 ease-in-out  hover:text-orange;
+}
+
+.mobile-menu {
+    @apply hidden text-center;
+}
+.mobile-menu ul {
+    @apply flex flex-col gap-4;
+}
+
