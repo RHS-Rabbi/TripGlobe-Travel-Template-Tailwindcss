@@ -1,1 +1,2 @@
 # TripGlobe-Travel-Template-Tailwindcss
+#
