@@ -12,8 +12,14 @@
     --spacing: 0.25rem;
     --text-sm: 0.875rem;
     --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
     --font-weight-normal: 400;
+    --font-weight-medium: 500;
     --radius-sm: 0.25rem;
+    --radius-xl: 0.75rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -21,10 +27,14 @@
     --default-mono-font-family: var(--font-mono);
     --font-roboto: 'Roboto', sans-serif;
     --font-poppins: 'Poppins', sans-serif;
+    --color-primary: #012E41;
     --color-2: #26A59E;
+    --color-body: #345867;
     --color-orange: #FA7335;
     --color-secondary-bg: rgba(0, 0, 0, 0.65);
     --background-image-gradient: rgba(255, 255, 255, 0.75);
+    --text-64x: 4rem;
+    --text-48x: 3rem;
   }
 }
 @layer base {
@@ -215,6 +225,9 @@
   .flex {
     display: flex;
   }
+  .grid {
+    display: grid;
+  }
   .hidden {
     display: none;
   }
@@ -242,6 +255,9 @@
   .justify-between {
     justify-content: space-between;
   }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
   .border {
     border-style: var(--tw-border-style);
     border-width: 1px;
@@ -252,6 +268,11 @@
   }
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+  }
+  .md\:grid-cols-2 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
   .md\:flex-row {
     @media (width >= 48rem) {
@@ -585,6 +606,97 @@ header {
   &:active {
     color: var(--color-orange);
   }
+}
+.hero-area {
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: left top;
+  background-repeat: no-repeat;
+  padding-top: calc(var(--spacing) * 20.5);
+}
+.hero-title span {
+  font-size: var(--text-lg);
+  line-height: var(--tw-leading, var(--text-lg--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-orange);
+}
+.hero-title h1 {
+  padding-top: calc(var(--spacing) * 3);
+  padding-bottom: calc(var(--spacing) * 6);
+  font-size: var(--text-48x);
+  --tw-leading: calc(var(--spacing) * 14.5);
+  line-height: calc(var(--spacing) * 14.5);
+  --tw-font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-primary);
+  @media (width >= 64rem) {
+    font-size: var(--text-64x);
+  }
+  @media (width >= 64rem) {
+    --tw-leading: calc(var(--spacing) * 19);
+    line-height: calc(var(--spacing) * 19);
+  }
+}
+.hero-title p {
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-body);
+  @media (width >= 64rem) {
+    width: calc(var(--spacing) * 104);
+  }
+}
+.hero-left-bg {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 5);
+}
+.hero-bg-1 {
+  @media (width >= 48rem) {
+    width: calc(var(--spacing) * 65);
+  }
+  @media (width >= 64rem) {
+    width: calc(var(--spacing) * 93);
+  }
+}
+.hero-bg-2 {
+  right: calc(var(--spacing) * 0);
+  @media (width >= 48rem) {
+    position: absolute;
+  }
+  @media (width >= 48rem) {
+    top: calc(var(--spacing) * 26.5);
+  }
+  @media (width >= 48rem) {
+    width: calc(var(--spacing) * 65);
+  }
+  @media (width >= 64rem) {
+    top: calc(var(--spacing) * 37.5);
+  }
+  @media (width >= 64rem) {
+    width: calc(var(--spacing) * 82.5);
+  }
+  @media (width >= 80rem) {
+    width: calc(var(--spacing) * 125);
+  }
+}
+.hero-bg-1 img {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+}
+.hero-bg-2 img {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+  object-position: center;
 }
 @property --tw-border-style {
   syntax: "*";
