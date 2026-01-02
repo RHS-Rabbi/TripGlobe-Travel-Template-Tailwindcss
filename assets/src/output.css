@@ -35,6 +35,7 @@
     --background-image-gradient: rgba(255, 255, 255, 0.75);
     --text-64x: 4rem;
     --text-48x: 3rem;
+    --animate-rotateText: rotateText 10s linear infinite;
   }
 }
 @layer base {
@@ -239,6 +240,10 @@
   }
   .table {
     display: table;
+  }
+  .size-6 {
+    width: calc(var(--spacing) * 6);
+    height: calc(var(--spacing) * 6);
   }
   .border-collapse {
     border-collapse: collapse;
@@ -698,6 +703,38 @@ header {
   object-fit: cover;
   object-position: center;
 }
+.hero-rotate-icon {
+  position: absolute;
+  right: 70px;
+}
+.hero-icon {
+  position: relative;
+}
+.hero-icon {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  animation: var(--animate-rotateText);
+}
+.hero-content-icon {
+  width: 100%;
+  position: relative;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.hero-content-icon span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: 0 50px;
+  white-space: pre;
+}
+.hero-play-icon {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
@@ -836,6 +873,14 @@ header {
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
+}
+@keyframes rotateText {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {

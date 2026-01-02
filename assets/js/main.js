@@ -12,3 +12,9 @@ $(document).ready(function () {
     });
 
 });
+
+const text = document.querySelector('.hero-icon .hero-content-icon');
+text.innerHTML = text.innerText.split("").map(
+    (char, i) =>
+        `<span style= "transform:rotate(${i * 17}deg)">${char}</span>`
+).join("")
