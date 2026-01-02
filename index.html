@@ -64,7 +64,7 @@
         <!--:::::::::::::::: Hero Section ::::::::::::::::::-->
         <section class="hero-area" style="background-image: url(./assets/img/hero-bg/hero.png);">
             <div class="container">
-                <div class="grid md:grid-cols-2 gap-8">
+                <div class="grid md:grid-cols-2 lg:gap-28 gap-8">
                     <div class="hero-left-content">
                         <article class="hero-title">
                             <span>Start Travelling with us</span>
@@ -94,6 +94,31 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <!-- Hero Form -->
+                <div class="hero-form">
+                    <form class="grid md:grid-cols-5 gap-6" action="#">
+                        <div class="single-hero-form">
+                            <label for="destination">Destination</label>
+                            <select id="destination" name="destination">
+                                <option value="paris">Paris</option>
+                                <option value="newyork">New York</option>
+                                <option value="london">London</option>
+                                <option value="tokyo">Tokyo</option>
+                                <option value="istanbul">Instanbul</option>
+                            </select>
+                        </div>
+                        <div class="single-hero-form">
+                            <label for="duration">Duration</label>
+                            <select id="duration" name="duration">
+                                <option value="1">1 Day</option>
+                                <option value="2">2 Days</option>
+                                <option value="3">3 Days</option>
+                                <option value="4">4 Days</option>
+                                <option value="5">5 Days</option>
+                            </select>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

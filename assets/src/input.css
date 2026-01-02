@@ -329,10 +329,8 @@ header {
 }
 
 .hero-rotate-icon {
-    @apply absolute right-17.5;
+    @apply absolute right-10 top-10 lg:top-5 lg:right-17.5 xl:right-7.5 xl:bg-transparent bg-white rounded-full xl:p-0 p-3;
 }
-
-
 
 .hero-icon {
     @apply animate-rotateText size-25 relative;
@@ -343,7 +341,7 @@ header {
 }
 
 .hero-content-icon span {
-  transform-origin: 0 50px; /* 🔥 172px এর জন্য perfect radius */
+  transform-origin: 0 50px;
   white-space: pre;
   @apply absolute left-[50%] top-[50%]; 
 
@@ -351,5 +349,11 @@ header {
 
 .hero-play-icon {
     @apply top-10 left-10 absolute;
+}
+
+
+/* ------------------------hero-form  --------------------------*/
+.hero-form{
+    @apply mt-[70px] px-7 py-8 relative bg-primary-bg rounded-lg;
 }
 
