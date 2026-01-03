@@ -426,3 +426,36 @@ header {
     @apply text-white hover:text-white focus:text-white active:text-white lg:text-inherit;
 }
 
+/* ------------------------About Section ----------------------------*/
+.about-area{
+    @apply pt-15;
+}
+
+.about-bg1{
+    @apply 2xl:w-[430px] xl:w-[330px] lg:w-[330px] w-[270px];
+}
+.about-bg2 {
+    @apply 2xl:w-[540px] xl:w-[500px] lg:w-[372px] md:w-[244px];
+}
+.about-bg3 {
+    @apply 2xl:w-[500px] xl:w-[400px] lg:w-[328px];
+}
+
+.about-bg1 img,.about-bg2 img ,.about-bg3 img{
+    @apply rounded-4xl;
+}
+.about-left-content{
+    @apply relative;
+}
+.about-bg2 {
+    position: absolute;
+    top: 120px;
+    left: 92px;
+    z-index: -1;
+}
+
+.about-bg3 {
+    position: absolute;
+    top: 330px;
+    z-index: -2;
+}
