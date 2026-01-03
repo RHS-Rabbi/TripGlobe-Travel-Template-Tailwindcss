@@ -184,6 +184,7 @@
     --color-border:#E9E9E9;
     --color-primary-bg: rgba(1, 46, 65, 0.80);
     --color-secondary-bg: rgba(0, 0, 0, 0.65);
+    --color-brdr-1:rgba(38, 165, 158, 0.50);
     --color-body-2:#E7E7E7;
     
     /* Gradient */
@@ -202,14 +203,17 @@
     --animate-rotateText: rotateText 10s linear infinite;
 
     @keyframes rotateText {
-    0% {
-        transform: rotate(0deg);
-    }
+        0% {
+            transform: rotate(0deg);
+        }
 
-    100% {
-        transform: rotate(360deg);
+        100% {
+            transform: rotate(360deg);
+        }
     }
-}
+    /* aspect ratio */
+    --aspect-hero-ctg: 46 / 39;
+
 
 }
 
@@ -378,6 +382,47 @@ header {
     @apply flex flex-col
 }
 .single-hero-forms .hero-form-btn{
-    @apply block text-white bg-orange p-2.5 cursor-pointer transition-all duration-300 ease-in-out hover:bg-white hover:text-2 hover:border-2 hover:border-2 active:bg-white active:text-2 active:border-2 active:border-2 focus:bg-white focus:text-2 focus:border-2 focus:border-2;
+    @apply block text-white bg-orange p-2.5 cursor-pointer transition-all duration-300 ease-in-out hover:bg-white hover:text-2 hover:border-2 hover:border-2 active:bg-white active:text-2 active:border-2 active:border-2 focus:bg-white focus:text-2 focus:border-2 focus:border-2 rounded-sm;
+}
+
+/* ------------------------Hero Catagories-------------------------- */
+.hero-catagories{
+    @apply pt-30 pb-7.5 flex flex-col gap-15;
+}
+.hero-catagories-title{
+    @apply md:w-154.5 mx-auto flex flex-col gap-2 text-center;
+}
+.hero-catagories-title span{
+    @apply text-orange text-sm font-normal leading-6 uppercase;
+}
+.hero-catagories-title h2{
+    @apply md:text-48x text-4xl font-semibold md:leading-14.25 leading-10 text-primary
+}
+.hero-catagories-contents{
+    @apply grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 gap-6;
+}
+.single-hero-catagories-content{
+    @apply py-6.25 px-11 flex flex-col gap-4 rounded-xl bg-white border-1 border-brdr-1 transition-all duration-300 ease-in-out hover:bg-2 focus:bg-2 active:bg-2 hover:text-white focus:text-white active:text-white lg:focus:bg-white lg:focus:text-inherit lg:active:bg-white lg:active:text-inherit;;
+}
+.single-hero-catagories-content:hover h4{
+    @apply text-white hover:text-white focus:text-white active:text-white lg:text-inherit;
+}
+.single-hero-catagories-content img {
+    @apply mx-auto aspect-hero-ctg flex shrink-0 object-cover;
+}
+.hero-catagories-content{
+    @apply text-center;
+}
+.hero-catagories-content{
+    @apply flex flex-col gap-4;
+}
+.hero-catagories-content h4{
+    @apply text-xl font-semibold text-primary leading-6 transition-all duration-300 ease-in-out  ;
+}
+.hero-catagories-content p{
+    @apply leading-6 text-primary text-base font-normal transition-all duration-300 ease-in-out ;
+}
+.single-hero-catagories-content:hover p{
+    @apply text-white hover:text-white focus:text-white active:text-white lg:text-inherit;
 }
 

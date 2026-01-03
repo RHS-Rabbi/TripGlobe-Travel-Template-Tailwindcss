@@ -18,8 +18,13 @@
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
     --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-normal: 400;
     --font-weight-medium: 500;
+    --font-weight-semibold: 600;
     --tracking-tight: -0.025em;
     --radius-sm: 0.25rem;
     --radius-lg: 0.5rem;
@@ -38,11 +43,13 @@
     --color-white-200: #F4F4F6;
     --color-primary-bg: rgba(1, 46, 65, 0.80);
     --color-secondary-bg: rgba(0, 0, 0, 0.65);
+    --color-brdr-1: rgba(38, 165, 158, 0.50);
     --color-body-2: #E7E7E7;
     --background-image-gradient: rgba(255, 255, 255, 0.75);
     --text-64x: 4rem;
     --text-48x: 3rem;
     --animate-rotateText: rotateText 10s linear infinite;
+    --aspect-hero-ctg: 46 / 39;
   }
 }
 @layer base {
@@ -865,6 +872,7 @@ header {
 .single-hero-forms .hero-form-btn {
   display: block;
   cursor: pointer;
+  border-radius: var(--radius-sm);
   background-color: var(--color-orange);
   padding: calc(var(--spacing) * 2.5);
   color: var(--color-white);
@@ -907,6 +915,202 @@ header {
   }
   &:active {
     color: var(--color-2);
+  }
+}
+.hero-catagories {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 15);
+  padding-top: calc(var(--spacing) * 30);
+  padding-bottom: calc(var(--spacing) * 7.5);
+}
+.hero-catagories-title {
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+  text-align: center;
+  @media (width >= 48rem) {
+    width: calc(var(--spacing) * 154.5);
+  }
+}
+.hero-catagories-title span {
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-orange);
+  text-transform: uppercase;
+}
+.hero-catagories-title h2 {
+  font-size: var(--text-4xl);
+  line-height: var(--tw-leading, var(--text-4xl--line-height));
+  --tw-leading: calc(var(--spacing) * 10);
+  line-height: calc(var(--spacing) * 10);
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  @media (width >= 48rem) {
+    font-size: var(--text-48x);
+  }
+  @media (width >= 48rem) {
+    --tw-leading: calc(var(--spacing) * 14.25);
+    line-height: calc(var(--spacing) * 14.25);
+  }
+}
+.hero-catagories-contents {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: calc(var(--spacing) * 6);
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (width >= 80rem) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.single-hero-catagories-content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+  border-radius: var(--radius-xl);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-brdr-1);
+  background-color: var(--color-white);
+  padding-inline: calc(var(--spacing) * 11);
+  padding-block: calc(var(--spacing) * 6.25);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-2);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+  &:focus {
+    background-color: var(--color-2);
+  }
+  &:focus {
+    color: var(--color-white);
+  }
+  &:active {
+    background-color: var(--color-2);
+  }
+  &:active {
+    color: var(--color-white);
+  }
+  @media (width >= 64rem) {
+    &:focus {
+      background-color: var(--color-white);
+    }
+  }
+  @media (width >= 64rem) {
+    &:focus {
+      color: inherit;
+    }
+  }
+  @media (width >= 64rem) {
+    &:active {
+      background-color: var(--color-white);
+    }
+  }
+  @media (width >= 64rem) {
+    &:active {
+      color: inherit;
+    }
+  }
+}
+.single-hero-catagories-content:hover h4 {
+  color: var(--color-white);
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+  &:focus {
+    color: var(--color-white);
+  }
+  &:active {
+    color: var(--color-white);
+  }
+  @media (width >= 64rem) {
+    color: inherit;
+  }
+}
+.single-hero-catagories-content img {
+  margin-inline: auto;
+  display: flex;
+  aspect-ratio: var(--aspect-hero-ctg);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+.hero-catagories-content {
+  text-align: center;
+}
+.hero-catagories-content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+}
+.hero-catagories-content h4 {
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+}
+.hero-catagories-content p {
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-primary);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+}
+.single-hero-catagories-content:hover p {
+  color: var(--color-white);
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-white);
+    }
+  }
+  &:focus {
+    color: var(--color-white);
+  }
+  &:active {
+    color: var(--color-white);
+  }
+  @media (width >= 64rem) {
+    color: inherit;
   }
 }
 @property --tw-rotate-x {
