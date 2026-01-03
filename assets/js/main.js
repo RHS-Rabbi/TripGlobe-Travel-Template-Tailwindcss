@@ -20,8 +20,11 @@ text.innerHTML = text.innerText.split("").map(
         `<span style= "transform:rotate(${i * 17}deg)">${char}</span>`
 ).join("")
 
+// Hero Section Video Popup
 $(document).ready(function() {
 	$('.hero-play-icon').magnificPopup({
     type: 'iframe'
   });
 });
+
+

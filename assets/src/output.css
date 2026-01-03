@@ -35,8 +35,10 @@
     --color-2: #26A59E;
     --color-body: #345867;
     --color-orange: #FA7335;
+    --color-white-200: #F4F4F6;
     --color-primary-bg: rgba(1, 46, 65, 0.80);
     --color-secondary-bg: rgba(0, 0, 0, 0.65);
+    --color-body-2: #E7E7E7;
     --background-image-gradient: rgba(255, 255, 255, 0.75);
     --text-64x: 4rem;
     --text-48x: 3rem;
@@ -265,6 +267,9 @@
   .items-center {
     align-items: center;
   }
+  .items-end {
+    align-items: flex-end;
+  }
   .justify-between {
     justify-content: space-between;
   }
@@ -299,11 +304,6 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
-  .md\:grid-cols-5 {
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-  }
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
@@ -317,6 +317,11 @@
   .lg\:hidden {
     @media (width >= 64rem) {
       display: none;
+    }
+  }
+  .lg\:grid-cols-5 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(5, minmax(0, 1fr));
     }
   }
   .lg\:gap-28 {
@@ -719,7 +724,7 @@ header {
     width: calc(var(--spacing) * 82.5);
   }
   @media (width >= 80rem) {
-    width: calc(var(--spacing) * 125);
+    width: calc(var(--spacing) * 110);
   }
 }
 .hero-bg-1 img {
@@ -788,11 +793,121 @@ header {
 }
 .hero-form {
   position: relative;
-  margin-top: 70px;
+  margin-top: calc(var(--spacing) * 20);
   border-radius: var(--radius-lg);
   background-color: var(--color-primary-bg);
+  @media (width >= 64rem) {
+    margin-top: calc(var(--spacing) * 13.75);
+  }
+  @media (width >= 80rem) {
+    margin-top: calc(var(--spacing) * 21);
+  }
+}
+.hero-form form {
   padding-inline: calc(var(--spacing) * 7);
   padding-block: calc(var(--spacing) * 8);
+}
+.single-hero-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 1);
+}
+.single-hero-form label {
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-white-200);
+}
+.single-hero-form select {
+  appearance: none;
+  border-radius: var(--radius-sm);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-body-2);
+  background-color: var(--color-white);
+  padding-inline: calc(var(--spacing) * 6.25);
+  padding-block: calc(var(--spacing) * 2.25);
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-primary);
+  --tw-outline-style: none;
+  outline-style: none;
+  &:focus {
+    border-color: var(--color-2);
+  }
+}
+.single-hero-form::after {
+  transform: translateY(-50%);
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='11' height='6' viewBox='0 0 11 6' fill='none'><path d='M0.75 0.75L5.25 5.25L9.75 0.75' stroke='%23343A40' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  pointer-events: none;
+  position: absolute;
+  top: 70%;
+  right: calc(var(--spacing) * 3.5);
+  height: calc(var(--spacing) * 1.5);
+  width: calc(var(--spacing) * 3);
+  background-size: contain;
+  background-repeat: no-repeat;
+  --tw-content: "";
+  content: var(--tw-content);
+}
+.single-hero-forms {
+  display: flex;
+  flex-direction: column;
+}
+.single-hero-forms .hero-form-btn {
+  display: block;
+  cursor: pointer;
+  background-color: var(--color-orange);
+  padding: calc(var(--spacing) * 2.5);
+  color: var(--color-white);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  &:hover {
+    @media (hover: hover) {
+      border-color: var(--color-2);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-white);
+    }
+  }
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-2);
+    }
+  }
+  &:focus {
+    border-color: var(--color-2);
+  }
+  &:focus {
+    background-color: var(--color-white);
+  }
+  &:focus {
+    color: var(--color-2);
+  }
+  &:active {
+    border-color: var(--color-2);
+  }
+  &:active {
+    background-color: var(--color-white);
+  }
+  &:active {
+    color: var(--color-2);
+  }
 }
 @property --tw-rotate-x {
   syntax: "*";
@@ -957,6 +1072,11 @@ header {
   syntax: "*";
   inherits: false;
 }
+@property --tw-content {
+  syntax: "*";
+  inherits: false;
+  initial-value: "";
+}
 @keyframes rotateText {
   0% {
     transform: rotate(0deg);
@@ -1006,6 +1126,7 @@ header {
       --tw-duration: initial;
       --tw-font-weight: initial;
       --tw-tracking: initial;
+      --tw-content: "";
     }
   }
 }

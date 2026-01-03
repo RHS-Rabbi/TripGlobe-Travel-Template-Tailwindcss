@@ -184,6 +184,7 @@
     --color-border:#E9E9E9;
     --color-primary-bg: rgba(1, 46, 65, 0.80);
     --color-secondary-bg: rgba(0, 0, 0, 0.65);
+    --color-body-2:#E7E7E7;
     
     /* Gradient */
     --background-image-gradient: rgba(255, 255, 255, 0.75);
@@ -315,7 +316,7 @@ header {
     @apply lg:w-93 md:w-65 ;
 }
 .hero-bg-2 {
-    @apply lg:w-82.5 xl:w-125 md:absolute lg:top-37.5 md:top-26.5 right-0 md:w-65;
+    @apply lg:w-82.5 xl:w-110  md:absolute lg:top-37.5 md:top-26.5 right-0 md:w-65;
 
 }
 
@@ -354,6 +355,29 @@ header {
 
 /* ------------------------hero-form  --------------------------*/
 .hero-form{
-    @apply mt-[70px] px-7 py-8 relative bg-primary-bg rounded-lg;
+    @apply xl:mt-21 mt-20 lg:mt-13.75 relative bg-primary-bg rounded-lg;
+}
+.hero-form form{
+    @apply px-7 py-8;
+}
+.single-hero-form {
+    @apply flex flex-col gap-1 relative;
+}
+.single-hero-form label{
+    @apply text-white-200 text-base leading-6 font-normal;
+}
+.single-hero-form select{
+    @apply appearance-none px-6.25 py-2.25 bg-white rounded-sm border-1 border-body-2 text-primary outline-none text-base leading-6 font-normal focus:border-2 focus:border-2 focus:border-2;
+}
+.single-hero-form::after {
+    transform: translateY(-50%);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='11' height='6' viewBox='0 0 11 6' fill='none'><path d='M0.75 0.75L5.25 5.25L9.75 0.75' stroke='%23343A40' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    @apply absolute content-[""] right-3.5 top-[70%] w-3 h-1.5 pointer-events-none bg-no-repeat bg-contain;
+}
+.single-hero-forms{
+    @apply flex flex-col
+}
+.single-hero-forms .hero-form-btn{
+    @apply block text-white bg-orange p-2.5 cursor-pointer transition-all duration-300 ease-in-out hover:bg-white hover:text-2 hover:border-2 hover:border-2 active:bg-white active:text-2 active:border-2 active:border-2 focus:bg-white focus:text-2 focus:border-2 focus:border-2;
 }
 
