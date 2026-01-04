@@ -464,6 +464,9 @@ header {
 }
 
 /*---------------- About Content--------------------- */
+.about-right-content{
+    @apply flex flex-col gap-6;
+}
 .abt-t.rotate-text span {
   transform-origin: 0 48px;
   @apply absolute

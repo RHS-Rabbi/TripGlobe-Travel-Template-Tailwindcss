@@ -1222,6 +1222,11 @@ header {
     top: calc(var(--spacing) * 82.5);
   }
 }
+.about-right-content {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 6);
+}
 .abt-t.rotate-text span {
   transform-origin: 0 48px;
   position: absolute;
