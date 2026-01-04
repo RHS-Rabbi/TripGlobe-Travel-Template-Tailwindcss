@@ -266,6 +266,9 @@
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
+  .animate-rotateText {
+    animation: var(--animate-rotateText);
+  }
   .resize {
     resize: both;
   }
@@ -491,6 +494,23 @@
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
     color: var(--color-orange);
+    text-transform: uppercase;
+  }
+  .heading-2 {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+    --tw-leading: calc(var(--spacing) * 10);
+    line-height: calc(var(--spacing) * 10);
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-primary);
+    @media (width >= 48rem) {
+      font-size: var(--text-48x);
+    }
+    @media (width >= 48rem) {
+      --tw-leading: calc(var(--spacing) * 14.25);
+      line-height: calc(var(--spacing) * 14.25);
+    }
   }
 }
 @layer components;
@@ -1201,6 +1221,37 @@ header {
   @media (width >= 64rem) {
     top: calc(var(--spacing) * 82.5);
   }
+}
+.abt-t.rotate-text span {
+  transform-origin: 0 48px;
+  position: absolute;
+}
+.about-btn {
+  position: relative;
+}
+.about-btn-content {
+  position: absolute;
+  left: calc(var(--spacing) * 11.25);
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  text-transform: uppercase;
+}
+.about-btns {
+  position: relative;
+}
+.about-btns a svg {
+  position: absolute;
+  top: calc(var(--spacing) * 8.25);
+  left: calc(var(--spacing) * 8.25);
+}
+.about-btn {
+  width: calc(var(--spacing) * 22.5);
+  height: calc(var(--spacing) * 22.5);
 }
 @property --tw-rotate-x {
   syntax: "*";

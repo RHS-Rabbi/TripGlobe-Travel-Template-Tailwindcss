@@ -229,7 +229,10 @@
     @apply font-poppins;
   }
   .site-intro{
-    @apply text-base text-orange leading-6 font-normal;
+    @apply text-base text-orange leading-6 font-normal uppercase;
+  }
+  .heading-2{
+    @apply md:text-48x text-4xl font-semibold md:leading-14.25 leading-10 text-primary
   }
 }
 /* ================= Component Style ====================== */
@@ -399,7 +402,7 @@ header {
     @apply text-orange text-sm font-normal leading-6 uppercase;
 }
 .hero-catagories-title h2{
-    @apply md:text-48x text-4xl font-semibold md:leading-14.25 leading-10 text-primary
+    @apply md:text-48x text-4xl font-semibold md:leading-14.25 leading-10 text-primary;
 }
 .hero-catagories-contents{
     @apply grid grid-cols-1 xl:grid-cols-4 md:grid-cols-2 gap-6;
@@ -458,4 +461,30 @@ header {
 
 .about-bg3 {
     @apply md:absolute lg:top-82.5 md:top-61.25 -z-2;
+}
+
+/*---------------- About Content--------------------- */
+.abt-t.rotate-text span {
+  transform-origin: 0 48px;
+  @apply absolute
+}
+
+
+.about-btn {
+    @apply relative;
+}
+
+.about-btn-content {
+    @apply absolute font-semibold left-11.25 uppercase text-primary leading-6 text-base;
+}
+
+.about-btns {
+    @apply relative;
+}
+
+.about-btns a svg {
+    @apply absolute top-8.25 left-8.25;
+}
+.about-btn {
+    @apply size-22.5;
 }
