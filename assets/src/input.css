@@ -430,32 +430,29 @@ header {
 .about-area{
     @apply pt-15;
 }
-
+.about-left-content{
+    @apply flex flex-col gap-8;
+}
 .about-bg1{
-    @apply 2xl:w-[430px] xl:w-[330px] lg:w-[330px] w-[270px];
+    @apply xl:w-107.5 lg:w-82.5 md:w-70 w-full;
 }
 .about-bg2 {
-    @apply 2xl:w-[540px] xl:w-[500px] lg:w-[372px] md:w-[244px];
+    @apply 2xl:w-135 xl:w-125 lg:w-93 md:w-61 w-full;
 }
 .about-bg3 {
-    @apply 2xl:w-[500px] xl:w-[400px] lg:w-[328px];
+    @apply 2xl:w-135 xl:w-100 lg:w-82 md:w-71.5 w-full;
 }
 
 .about-bg1 img,.about-bg2 img ,.about-bg3 img{
-    @apply rounded-4xl;
+    @apply md:rounded-4xl rounded-xl;
 }
 .about-left-content{
     @apply relative;
 }
 .about-bg2 {
-    position: absolute;
-    top: 120px;
-    left: 92px;
-    z-index: -1;
+    @apply md:absolute top-30 left-23 -z-1
 }
 
 .about-bg3 {
-    position: absolute;
-    top: 330px;
-    z-index: -2;
+    @apply md:absolute lg:top-82.5 md:top-61.25 -z-2;
 }
