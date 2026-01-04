@@ -20,6 +20,8 @@
     --text-lg--line-height: calc(1.75 / 1.125);
     --text-xl: 1.25rem;
     --text-xl--line-height: calc(1.75 / 1.25);
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-normal: 400;
@@ -38,19 +40,21 @@
     --font-roboto: 'Roboto', sans-serif;
     --font-poppins: 'Poppins', sans-serif;
     --color-primary: #012E41;
+    --color-secondary: #F6F6F6;
     --color-2: #26A59E;
     --color-body: #345867;
+    --color-body-3: #012E41B2;
     --color-orange: #FA7335;
     --color-white-200: #F4F4F6;
     --color-primary-bg: rgba(1, 46, 65, 0.80);
     --color-secondary-bg: rgba(0, 0, 0, 0.65);
     --color-brdr-1: rgba(38, 165, 158, 0.50);
     --color-body-2: #E7E7E7;
-    --background-image-gradient: rgba(255, 255, 255, 0.75);
     --text-64x: 4rem;
     --text-48x: 3rem;
     --animate-rotateText: rotateText 10s linear infinite;
     --aspect-hero-ctg: 46 / 39;
+    --aspect-top-destination-img: 70 / 71;
   }
 }
 @layer base {
@@ -284,11 +288,17 @@
   .justify-between {
     justify-content: space-between;
   }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
   .gap-8 {
     gap: calc(var(--spacing) * 8);
+  }
+  .gap-18\.5 {
+    gap: calc(var(--spacing) * 18.5);
   }
   .border {
     border-style: var(--tw-border-style);
@@ -333,6 +343,11 @@
   .lg\:grid-cols-5 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+  }
+  .lg\:flex-row {
+    @media (width >= 64rem) {
+      flex-direction: row;
     }
   }
   .lg\:gap-28 {
@@ -480,6 +495,7 @@
 }
 @layer base {
   body {
+    background-color: var(--color-white);
     font-family: var(--font-roboto);
     font-style: normal;
   }
@@ -515,7 +531,11 @@
 }
 @layer components;
 header {
-  background-image: var(--background-image-gradient);
+  position: sticky;
+  top: calc(var(--spacing) * 0);
+  z-index: 999;
+  width: 100%;
+  background-color: var(--color-white);
   padding-block: calc(var(--spacing) * 5);
   --tw-inset-shadow: 0px 4px 15px var(--tw-inset-shadow-color, rgba(0, 0, 0, 0.1));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
@@ -1145,6 +1165,7 @@ header {
 }
 .about-area {
   padding-top: calc(var(--spacing) * 15);
+  padding-bottom: calc(var(--spacing) * 22.5);
 }
 .about-left-content {
   display: flex;
@@ -1226,6 +1247,9 @@ header {
   display: flex;
   flex-direction: column;
   gap: calc(var(--spacing) * 6);
+  @media (width >= 64rem) {
+    padding-block: calc(var(--spacing) * 33.75);
+  }
 }
 .abt-t.rotate-text span {
   transform-origin: 0 48px;
@@ -1257,6 +1281,121 @@ header {
 .about-btn {
   width: calc(var(--spacing) * 22.5);
   height: calc(var(--spacing) * 22.5);
+}
+.abt-p {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 6);
+}
+.abt-p p {
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-primary);
+}
+.about-title h2 {
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  --tw-leading: calc(var(--spacing) * 10);
+  line-height: calc(var(--spacing) * 10);
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  @media (width >= 48rem) {
+    --tw-leading: calc(var(--spacing) * 7.5);
+    line-height: calc(var(--spacing) * 7.5);
+  }
+  @media (width >= 64rem) {
+    font-size: var(--text-48x);
+  }
+  @media (width >= 64rem) {
+    --tw-leading: calc(var(--spacing) * 14.25);
+    line-height: calc(var(--spacing) * 14.25);
+  }
+}
+.top-destinations {
+  @media (width >= 64rem) {
+    padding-block: calc(var(--spacing) * 30);
+  }
+}
+.top-destinations-title {
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 6);
+  text-align: center;
+  @media (width >= 48rem) {
+    width: calc(var(--spacing) * 157.5);
+  }
+}
+.top-destinations-title p {
+  font-size: var(--text-base);
+  line-height: var(--tw-leading, var(--text-base--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-normal);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-primary);
+}
+.top-destination-contents {
+  display: grid;
+  gap: calc(var(--spacing) * 6);
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (width >= 64rem) {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+.single-top-destination {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 4);
+  border-radius: var(--radius-xl);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-body-2);
+  padding: calc(var(--spacing) * 4.25);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-secondary);
+    }
+  }
+  &:focus {
+    background-color: var(--color-secondary);
+  }
+  &:active {
+    background-color: var(--color-secondary);
+  }
+}
+.single-top-destination img {
+  display: flex;
+  aspect-ratio: var(--aspect-top-destination-img);
+  flex-shrink: 0;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+.top-destination-content h4 {
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+}
+.top-destination-content p {
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  color: var(--color-body-3);
 }
 @property --tw-rotate-x {
   syntax: "*";

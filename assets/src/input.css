@@ -178,6 +178,7 @@
     --color-secondary: #F6F6F6;
     --color-2: #26A59E;
     --color-body: #345867;
+    --color-body-3: #012E41B2;
     --color-orange:#FA7335;
     --color-orange-2:##FFD482;
     --color-white-200:#F4F4F6;
@@ -186,6 +187,7 @@
     --color-secondary-bg: rgba(0, 0, 0, 0.65);
     --color-brdr-1:rgba(38, 165, 158, 0.50);
     --color-body-2:#E7E7E7;
+
     
     /* Gradient */
     --background-image-gradient: rgba(255, 255, 255, 0.75);
@@ -213,6 +215,7 @@
     }
     /* aspect ratio */
     --aspect-hero-ctg: 46 / 39;
+    --aspect-top-destination-img: 70 / 71;
 
 
 }
@@ -223,7 +226,7 @@
 
 @layer base {
   body {
-    @apply font-roboto not-italic;
+    @apply font-roboto not-italic bg-white;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-poppins;
@@ -232,7 +235,7 @@
     @apply text-base text-orange leading-6 font-normal uppercase;
   }
   .heading-2{
-    @apply md:text-48x text-4xl font-semibold md:leading-14.25 leading-10 text-primary
+    @apply md:text-48x text-4xl font-semibold md:leading-14.25 leading-10 text-primary;
   }
 }
 /* ================= Component Style ====================== */
@@ -243,7 +246,7 @@
 
 /*==================== Header Section ==========================*/
 header {
-    @apply py-5  bg-gradient inset-shadow-primary;
+    @apply py-5  bg-white inset-shadow-primary sticky top-0 z-999 w-full;
     backdrop-filter: blur(2.5px);
 }
 .site-logo a img {
@@ -434,7 +437,7 @@ header {
 
 /* ------------------------About Section ----------------------------*/
 .about-area{
-    @apply pt-15;
+    @apply pt-15 pb-22.5;
 }
 .about-left-content{
     @apply flex flex-col gap-8;
@@ -465,7 +468,7 @@ header {
 
 /*---------------- About Content--------------------- */
 .about-right-content{
-    @apply flex flex-col gap-6;
+    @apply flex flex-col gap-6  lg:py-33.75;
 }
 .abt-t.rotate-text span {
   transform-origin: 0 48px;
@@ -490,4 +493,40 @@ header {
 }
 .about-btn {
     @apply size-22.5;
+}
+.abt-p {
+    @apply flex flex-col gap-6;
+}
+.abt-p p{
+    @apply text-primary text-base font-normal leading-6;
+}
+
+.about-title h2{
+    @apply lg:text-48x text-2xl font-semibold md:leading-7.5 lg:leading-14.25 leading-10 text-primary;
+}
+
+/* ========================Top Destinations ===============================*/
+.top-destinations{
+    @apply lg:py-30;
+}
+.top-destinations-title{
+    @apply md:w-157.5 text-center mx-auto flex flex-col gap-6;
+}
+.top-destinations-title p{
+    @apply text-primary text-base font-normal leading-6
+}
+.top-destination-contents{
+    @apply grid lg:grid-cols-4 md:grid-cols-2 gap-6;
+}
+.single-top-destination {
+    @apply p-4.25 border-1 border-body-2 rounded-xl flex gap-4 items-center transition-all duration-300 hover:bg-secondary focus:bg-secondary active:bg-secondary;
+}
+.single-top-destination img {
+    @apply flex shrink-0 object-cover rounded-lg aspect-top-destination-img;
+}
+.top-destination-content h4{
+    @apply text-primary font-semibold leading-6;
+}
+.top-destination-content p{
+    @apply text-sm leading-6 text-body-3;
 }
