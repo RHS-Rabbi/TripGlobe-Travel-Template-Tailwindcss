@@ -417,7 +417,7 @@ header {
 .single-hero-catagories-content{
     @apply py-6.25 px-11 flex flex-col gap-4 rounded-xl bg-white border-1 border-brdr-1 transition-all duration-300 ease-in-out hover:bg-2 focus:bg-2 active:bg-2 hover:text-white focus:text-white active:text-white lg:focus:bg-white lg:focus:text-inherit lg:active:bg-white lg:active:text-inherit;;
 }
-.single-hero-catagories-content:hover h4{
+.single-hero-catagories-content:hover h3{
     @apply text-white hover:text-white focus:text-white active:text-white lg:text-inherit;
 }
 .single-hero-catagories-content img {
@@ -429,7 +429,7 @@ header {
 .hero-catagories-content{
     @apply flex flex-col gap-4;
 }
-.hero-catagories-content h4{
+.hero-catagories-content h3{
     @apply text-xl font-semibold text-primary leading-6 transition-all duration-300 ease-in-out  ;
 }
 .hero-catagories-content p{
@@ -511,7 +511,7 @@ header {
 
 /* ========================Top Destinations ===============================*/
 .top-destinations{
-    @apply lg:py-30;
+    @apply lg:py-30 pb-30;
 }
 .top-destinations-title{
     @apply md:w-157.5 text-center mx-auto flex flex-col gap-6;
@@ -528,9 +528,17 @@ header {
 .single-top-destination img {
     @apply flex shrink-0 object-cover rounded-lg aspect-top-destination-img;
 }
-.top-destination-content h4{
+.top-destination-content h3{
     @apply text-primary font-semibold leading-6;
 }
 .top-destination-content p{
     @apply text-sm leading-6 text-body-3;
+}
+
+/* ========================Blog Area ===============================*/
+.blog-title{
+    @apply md:w-138.75;
+}
+.blog{
+    @apply grid md:grid-cols-2 gap-6;
 }
