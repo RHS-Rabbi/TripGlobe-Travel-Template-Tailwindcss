@@ -46,6 +46,7 @@
     --color-body-3: #012E41B2;
     --color-orange: #FA7335;
     --color-white-200: #F4F4F6;
+    --color-white-1000: rgba(255,255,255,.75);
     --color-primary-bg: rgba(1, 46, 65, 0.80);
     --color-secondary-bg: rgba(0, 0, 0, 0.65);
     --color-brdr-1: rgba(38, 165, 158, 0.50);
@@ -531,15 +532,27 @@
 }
 @layer components;
 header {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+  border-color: #dddddd45;
+  padding-block: calc(var(--spacing) * 5);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+}
+.scroll-header {
   position: sticky;
   top: calc(var(--spacing) * 0);
   z-index: 999;
   width: 100%;
-  background-color: var(--color-white);
-  padding-block: calc(var(--spacing) * 5);
+  background-color: var(--color-white-1000);
   --tw-inset-shadow: 0px 4px 15px var(--tw-inset-shadow-color, rgba(0, 0, 0, 0.1));
   box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
-  backdrop-filter: blur(2.5px);
+  backdrop-filter: blur(5.5px);
 }
 .site-logo a img {
   aspect-ratio: 47/18;
@@ -1487,6 +1500,10 @@ header {
   syntax: "*";
   inherits: false;
 }
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-shadow {
   syntax: "*";
   inherits: false;
@@ -1552,10 +1569,6 @@ header {
   inherits: false;
   initial-value: 0 0 #0000;
 }
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
 @property --tw-tracking {
   syntax: "*";
   inherits: false;
@@ -1598,6 +1611,7 @@ header {
       --tw-ease: initial;
       --tw-leading: initial;
       --tw-font-weight: initial;
+      --tw-duration: initial;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
@@ -1612,7 +1626,6 @@ header {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
-      --tw-duration: initial;
       --tw-tracking: initial;
       --tw-content: "";
     }

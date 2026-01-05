@@ -12,6 +12,14 @@ $(document).ready(function () {
     });
 
 });
+// Header Scroll
+$(window).on('scroll', function () {
+  if ($(this).scrollTop() > 50) {
+    $('header').addClass('scroll-header');
+  } else {
+    $('header').removeClass('scroll-header');
+  }
+});
 
 // For Hero Section Rotating Text
 const text = document.querySelector('.hero-icon .hero-content-icon');
@@ -29,19 +37,7 @@ $(document).ready(function() {
   });
 });
 
-// document.querySelectorAll('.rotate-text').forEach(text => {
-//   // আগেই rotate হয়ে থাকলে skip করবে
-//   if (text.dataset.rotated) return;
 
-//   const originalText = text.textContent.trim();
-
-//   text.innerHTML = originalText.split("").map(
-//     (char, i) =>
-//       `<span style="transform:rotate(${i * 17}deg)">${char}</span>`
-//   ).join("");
-
-//   text.dataset.rotated = "true";
-// });
 
 document.querySelectorAll('.rotate-text').forEach(text => {
   if (text.dataset.rotated) return;
@@ -56,6 +52,5 @@ document.querySelectorAll('.rotate-text').forEach(text => {
 
   text.dataset.rotated = "true";
 });
-
 
 
