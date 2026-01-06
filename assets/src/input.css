@@ -217,6 +217,7 @@
     /* aspect ratio */
     --aspect-hero-ctg: 46 / 39;
     --aspect-top-destination-img: 70 / 71;
+    --aspect-blog-img:  636.00 / 446.31;
 
 
 }
@@ -237,6 +238,9 @@
   }
   .heading-2{
     @apply md:text-48x text-4xl font-semibold md:leading-14.25 leading-10 text-primary;
+  }
+  .heading-3{
+    @apply text-primary text-34x font-medium leading-10 transition-all duration-300 ease-in-out hover:text-orange;
   }
 }
 /* ================= Component Style ====================== */
@@ -542,3 +546,26 @@ header {
 .blog{
     @apply grid md:grid-cols-2 gap-6;
 }
+.blog-left-contents{
+    @apply flex flex-col gap-6
+}
+.blog-content-bg{
+    @apply flex flex-col gap-8
+}
+
+.blog-content-bg img{
+    @apply flex shrink-0 object-cover aspect-blog-img rounded-3xl;
+}
+.blog-left-content{
+    @apply flex flex-col gap-4;
+}
+.blog-left-content span{
+    @apply text-orange leading-6 text-sm font-normal capitalize;
+}
+.blog-left-content p{
+   @apply text-body text-base leading-6 font-normal;
+}
+.blog-btn a{
+    @apply inline-block py-3 px-5.25 bg-primary text-white capitalize text-base font-normal leading-6 rounded-sm transition-all duration-300 ease-in-out hover:bg-orange hover:text-white focus:bg-orange focus:text-white active:bg-orange active:text-white;
+}
+
