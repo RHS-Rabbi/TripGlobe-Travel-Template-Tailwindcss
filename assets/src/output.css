@@ -1553,6 +1553,41 @@ header {
   height: calc(var(--spacing) * 0.25);
   background-color: var(--color-body-2);
 }
+.c_area {
+  height: calc(var(--spacing) * 187.5);
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.c_title {
+  color: var(--color-white-200);
+}
+.c-btn {
+  position: relative;
+  width: calc(var(--spacing) * 22.5);
+  height: calc(var(--spacing) * 22.5);
+}
+.c-t span {
+  transform-origin: 0 48px;
+  position: absolute;
+}
+.c-t.rotate-text {
+  position: absolute;
+  top: calc(var(--spacing) * -0.75);
+  left: calc(var(--spacing) * 11.25);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  text-transform: uppercase;
+}
+.c_btns {
+  position: relative;
+}
+.c_btns a {
+  position: absolute;
+  top: calc(var(--spacing) * 8);
+  left: calc(var(--spacing) * 8);
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;

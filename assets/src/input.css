@@ -577,3 +577,31 @@ header {
 .blog-divider{
     @apply h-0.25 bg-body-2
 }
+
+/* -------------------------C Area ------------------------------*/
+.c_area{
+    @apply h-187.5 bg-cover bg-center bg-no-repeat bg-scroll;
+}
+.c_title{
+    @apply text-white-200;
+}
+.c-btn {
+
+    @apply size-22.5 relative;
+}
+.c-t  span {
+    transform-origin: 0 48px;
+    position: absolute;
+
+}
+.c-t.rotate-text {
+    @apply text-sm absolute left-11.25 -top-0.75 uppercase;
+}
+
+.c_btns {
+    @apply relative;
+}
+
+.c_btns a {
+    @apply absolute top-8 left-8;
+}
