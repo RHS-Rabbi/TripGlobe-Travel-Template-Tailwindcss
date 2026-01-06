@@ -22,6 +22,8 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-normal: 400;
@@ -1554,14 +1556,38 @@ header {
   background-color: var(--color-body-2);
 }
 .c_area {
-  height: calc(var(--spacing) * 187.5);
   background-size: cover;
   background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;
 }
+.c_con {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  @media (width >= 48rem) {
+    flex-direction: row;
+  }
+  @media (width >= 64rem) {
+    height: calc(var(--spacing) * 187.5);
+  }
+}
 .c_title {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(var(--spacing) * 6);
+  padding-block: calc(var(--spacing) * 20);
   color: var(--color-white-200);
+  @media (width >= 48rem) {
+    flex-direction: row;
+  }
+  @media (width >= 48rem) {
+    padding-block: calc(var(--spacing) * 30);
+  }
 }
 .c-btn {
   position: relative;
@@ -1587,6 +1613,27 @@ header {
   position: absolute;
   top: calc(var(--spacing) * 8);
   left: calc(var(--spacing) * 8);
+}
+.c_title h2 {
+  text-align: center;
+  font-size: var(--text-3xl);
+  line-height: var(--tw-leading, var(--text-3xl--line-height));
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white-200);
+  @media (width >= 48rem) {
+    width: calc(var(--spacing) * 123.75);
+  }
+  @media (width >= 48rem) {
+    text-align: left;
+  }
+  @media (width >= 48rem) {
+    font-size: var(--text-48x);
+  }
+  @media (width >= 48rem) {
+    --tw-leading: calc(var(--spacing) * 14.25);
+    line-height: calc(var(--spacing) * 14.25);
+  }
 }
 @property --tw-rotate-x {
   syntax: "*";

@@ -580,10 +580,13 @@ header {
 
 /* -------------------------C Area ------------------------------*/
 .c_area{
-    @apply h-187.5 bg-cover bg-center bg-no-repeat bg-scroll;
+    @apply bg-cover bg-center bg-no-repeat bg-scroll;
+}
+.c_con{
+    @apply flex flex-col md:flex-row  lg:h-187.5 items-end justify-end;
 }
 .c_title{
-    @apply text-white-200;
+    @apply text-white-200 w-full gap-6 flex flex-col md:flex-row justify-between items-center md:py-30 py-20;
 }
 .c-btn {
 
@@ -604,4 +607,8 @@ header {
 
 .c_btns a {
     @apply absolute top-8 left-8;
+}
+
+.c_title h2{
+    @apply text-white-200 text-3xl text-center md:text-left md:text-48x md:w-123.75 md:leading-14.25 font-semibold;
 }
