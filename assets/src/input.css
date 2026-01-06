@@ -540,6 +540,9 @@ header {
 }
 
 /* ========================Blog Area ===============================*/
+.blog-area{
+    @apply pb-30
+}
 .blog-title{
     @apply md:w-138.75;
 }
