@@ -612,3 +612,18 @@ header {
 .c_title h2{
     @apply text-white-200 text-3xl text-center md:text-left md:text-48x md:w-123.75 md:leading-14.25 font-semibold;
 }
+
+
+/* --------------------- P Destination ----------------------------- */
+.p-destination{
+    @apply py-30;
+}
+.p-desti-con{
+    @apply flex flex-col gap-15;
+}
+.p-destination-title{
+    @apply md:w-146.75 mx-auto text-center;
+}
+.p-destinations{
+    @apply grid md:grid-cols-3 gap-6;
+}

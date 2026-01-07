@@ -1635,6 +1635,28 @@ header {
     line-height: calc(var(--spacing) * 14.25);
   }
 }
+.p-destination {
+  padding-block: calc(var(--spacing) * 30);
+}
+.p-desti-con {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 15);
+}
+.p-destination-title {
+  margin-inline: auto;
+  text-align: center;
+  @media (width >= 48rem) {
+    width: calc(var(--spacing) * 146.75);
+  }
+}
+.p-destinations {
+  display: grid;
+  gap: calc(var(--spacing) * 6);
+  @media (width >= 48rem) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;
