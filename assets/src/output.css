@@ -1650,12 +1650,212 @@ header {
     width: calc(var(--spacing) * 146.75);
   }
 }
+.p-destination-title {
+  font-size: var(--text-3xl);
+  line-height: var(--tw-leading, var(--text-3xl--line-height));
+  --tw-leading: calc(var(--spacing) * 10);
+  line-height: calc(var(--spacing) * 10);
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  @media (width >= 48rem) {
+    font-size: var(--text-48x);
+  }
+  @media (width >= 48rem) {
+    --tw-leading: calc(var(--spacing) * 14.25);
+    line-height: calc(var(--spacing) * 14.25);
+  }
+}
 .p-destinations {
   display: grid;
   gap: calc(var(--spacing) * 6);
   @media (width >= 48rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (width >= 64rem) {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+.single-popu-destination {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 6);
+  border-radius: var(--radius-lg);
+  border-style: var(--tw-border-style);
+  border-width: 1px;
+  border-color: var(--color-body-2);
+  background-color: var(--color-white);
+  padding: calc(var(--spacing) * 6.25);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-secondary);
+    }
+  }
+  &:focus {
+    background-color: var(--color-secondary);
+  }
+  &:active {
+    background-color: var(--color-secondary);
+  }
+}
+.single-popu-bg {
+  position: relative;
+}
+.single-popu-bg img {
+  aspect-ratio: var(--aspect-top-destination-img);
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+.popular-intro-1 {
+  position: absolute;
+  top: calc(var(--spacing) * 2);
+  left: calc(var(--spacing) * 2);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-orange);
+  padding-inline: calc(var(--spacing) * 4.25);
+  padding-block: calc(var(--spacing) * 1.25);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  color: var(--color-white-200);
+}
+.popular-intro-2 {
+  position: absolute;
+  top: calc(var(--spacing) * 2);
+  right: calc(var(--spacing) * 2);
+  display: flex;
+  width: calc(var(--spacing) * 8.5);
+  height: calc(var(--spacing) * 8.5);
+  align-items: center;
+  justify-content: center;
+  border-radius: calc(infinity * 1px);
+  background-color: var(--color-white-200);
+}
+.popular-destination-icon {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 1.5);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  color: var(--color-body);
+}
+.popular-destination-title h3 {
+  font-size: var(--text-xl);
+  line-height: var(--tw-leading, var(--text-xl--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  &:hover {
+    @media (hover: hover) {
+      color: var(--color-orange);
+    }
+  }
+  &:focus {
+    color: var(--color-orange);
+  }
+  &:active {
+    color: var(--color-orange);
+  }
+}
+.popular-destination-title p {
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  color: var(--color-body);
+}
+.popular-destination-contents {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+}
+.popular-desti-price {
+  display: flex;
+  justify-content: space-between;
+}
+.popu-desti-price {
+  display: flex;
+}
+.popular-desti-price a {
+  display: inline-block;
+  border-radius: var(--radius-sm);
+  background-color: var(--color-orange);
+  padding-inline: calc(var(--spacing) * 5.25);
+  padding-block: calc(var(--spacing) * 2.25);
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  color: var(--color-white-200);
+  transition-property: all;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 300ms;
+  transition-duration: 300ms;
+  --tw-ease: var(--ease-in-out);
+  transition-timing-function: var(--ease-in-out);
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-primary);
+    }
+  }
+  &:focus {
+    background-color: var(--color-primary);
+  }
+  &:active {
+    background-color: var(--color-primary);
+  }
+}
+.popu-desti-price {
+  align-items: center;
+  font-size: var(--text-sm);
+  line-height: var(--tw-leading, var(--text-sm--line-height));
+  color: var(--color-primary);
+}
+.popu-desti-price h4 {
+  font-size: var(--text-2xl);
+  line-height: var(--tw-leading, var(--text-2xl--line-height));
+  --tw-leading: calc(var(--spacing) * 6);
+  line-height: calc(var(--spacing) * 6);
+  --tw-font-weight: var(--font-weight-semibold);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+}
+.popular-destination-title {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+}
+.popular-destination-rating {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 7.5);
+}
+.popu-icon {
+  display: flex;
+  gap: calc(var(--spacing) * 1);
+}
+.popu-icon p {
+  font-size: var(--text-xs);
+  line-height: var(--tw-leading, var(--text-xs--line-height));
+  --tw-leading: calc(var(--spacing) * 4);
+  line-height: calc(var(--spacing) * 4);
+  color: var(--color-primary);
 }
 @property --tw-rotate-x {
   syntax: "*";

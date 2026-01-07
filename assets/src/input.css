@@ -218,6 +218,7 @@
     --aspect-hero-ctg: 46 / 39;
     --aspect-top-destination-img: 70 / 71;
     --aspect-blog-img:  636.00 / 446.31;
+    --aspect-popular-destination-img: 366.00 / 284.16;
 
 
 }
@@ -624,6 +625,63 @@ header {
 .p-destination-title{
     @apply md:w-146.75 mx-auto text-center;
 }
+.p-destination-title{
+    @apply md:text-48x text-3xl font-semibold md:leading-14.25 leading-10 text-primary;
+}
 .p-destinations{
-    @apply grid md:grid-cols-3 gap-6;
+    @apply grid lg:grid-cols-3 md:grid-cols-2 gap-6;
+}
+.single-popu-destination{
+    @apply flex flex-col gap-6 border-1 border-body-2 rounded-lg bg-white p-6.25 transition-all ease-in-out duration-300 hover:bg-secondary focus:bg-secondary active:bg-secondary;
+}
+.single-popu-bg{
+    @apply relative;
+}
+.single-popu-bg img {
+    @apply aspect-top-destination-img object-cover rounded-lg;
+}
+.popular-intro-1 {
+    @apply py-1.25 px-4.25 top-2 left-2 absolute bg-orange rounded-sm text-sm leading-6 text-white-200;
+}
+.popular-intro-2{
+    @apply size-8.5 top-2 right-2 absolute bg-white-200 flex justify-center items-center rounded-full;
+}
+.popular-destination-icon{
+    @apply flex gap-1.5 items-center text-sm text-body;
+}
+.popular-destination-title h3{
+    @apply text-xl text-primary font-semibold leading-6 transition-all ease-in-out duration-300 hover:text-orange focus:text-orange active:text-orange;
+}
+.popular-destination-title p{
+    @apply text-sm leading-6 text-body;
+}
+.popular-destination-contents{
+    @apply flex flex-col gap-2;
+}
+.popular-desti-price{
+    @apply flex justify-between;
+}
+.popu-desti-price{
+    @apply flex ;
+}
+.popular-desti-price a {
+    @apply inline-block py-2.25 px-5.25 bg-orange text-sm text-white-200 rounded-sm transition-all ease-in-out duration-300 hover:bg-primary focus:bg-primary active:bg-primary;
+}
+.popu-desti-price {
+    @apply text-primary text-sm items-center;
+}
+.popu-desti-price h4{
+    @apply text-2xl text-primary font-semibold leading-6;
+}
+.popular-destination-title {
+    @apply flex flex-col gap-2;
+}
+.popular-destination-rating {
+    @apply flex flex-col gap-7.5;
+}
+.popu-icon{
+    @apply flex gap-1;
+}
+.popu-icon p{
+    @apply text-xs leading-4 text-primary;
 }
