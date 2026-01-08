@@ -697,6 +697,6 @@ header {
 .testimonial-right-title{
     @apply w-126.5
 }
-..single-testimonial {
+.single-testimonial {
     @apply 
 }
