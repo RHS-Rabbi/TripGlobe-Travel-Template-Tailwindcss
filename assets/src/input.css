@@ -219,6 +219,7 @@
     --aspect-top-destination-img: 70 / 71;
     --aspect-blog-img:  636.00 / 446.31;
     --aspect-popular-destination-img: 366.00 / 284.16;
+    --aspect-testimonial-bg: 150 / 221;
 
 
 }
@@ -684,4 +685,15 @@ header {
 }
 .popu-icon p{
     @apply text-xs leading-4 text-primary;
+}
+
+/* -------------------------Testimonial Area ------------------------------*/
+.testimonial-area{
+    @apply bg-secondary py-30;
+}
+.testomial-bg img{
+    @apply aspect-testimonial-bg object-cover rounded-full;
+}
+.testimonial-right-title{
+    @apply w-126.5
 }
