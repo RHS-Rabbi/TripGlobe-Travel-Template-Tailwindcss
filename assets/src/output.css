@@ -1886,6 +1886,12 @@ header {
 .testimonial-right-title {
   width: calc(var(--spacing) * 126.5);
 }
+.single-testimonial {
+  background-color: var(--color-white);
+  padding-block: calc(var(--spacing) * 6.25);
+  padding-right: calc(var(--spacing) * 11.75);
+  padding-left: calc(var(--spacing) * 6.25);
+}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;

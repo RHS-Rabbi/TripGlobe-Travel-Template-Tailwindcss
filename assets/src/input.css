@@ -698,5 +698,5 @@ header {
     @apply w-126.5
 }
 .single-testimonial {
-    @apply 
+    @apply py-6.25 pl-6.25 pr-11.75 bg-white;
 }
