@@ -695,10 +695,10 @@ header {
     @apply aspect-testimonial-bg object-cover rounded-full;
 }
 .testimonial-right-title{
-    @apply w-126.5
+    @apply lg:w-126.5
 }
 .single-testimonial {
-    @apply py-6.25 pl-6.25 pr-11.75 bg-white flex flex-col gap-4 border-1 border-border rounded-lg;
+    @apply py-6.25 pl-6.25 pr-11.75 flex flex-col gap-4;
 }
 .single-testimonial p {
     @apply text-sm text-body leading-6; 
@@ -718,12 +718,13 @@ header {
 .tesimonial-user-info p{
     @apply text-sm leading-6 text-body;
 }
+.testimonial-right-content{
+    @apply flex flex-col gap-15;
+}
+.testimonial-wrapper {
+    @apply w-[377px] bg-white rounded-lg border-1 border-border;
+}
+#testimonial-slider .owl-item:first-child .testimonial-wrapper {
+  background-color: #ff0000;
+}
 
-
-/* .testimonial-slider .owl-stage-outer {
-    overflow: visible;
-} */
-
-/* .owl-item {
-    width: 377px !important;
-} */

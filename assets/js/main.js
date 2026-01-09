@@ -60,28 +60,28 @@ jQuery(document).ready(function(){
     loop:true,
     margin:16,
     nav:false,
-    items: 3,
+    items: 1,
+    autoWidth: true, 
+    dots:false,
     // autoplay: true,
-    // autoplayTimeout: 2000,
+    // autoplayTimeout: 3000,
     // autoplayHoverPause: true,
-    responsiveClass:true,
-    responsive:{
-        0:{
-            items:1,
-        },
-        768:{
-            items:2,
-        },
-        1024:{
-            items:3,
-        }
-    }
+    // responsiveClass:true,
+    // responsive:{
+    //     0:{
+    //         items:1,
+    //     },
+    //     768:{
+    //         items:1,
+    //     },
+    //     1024:{
+    //         items:1,
+    //     }
+    // }
   });
 })
 
-$('#testimonial-slider .owl-carousel').on('initialized.owl.carousel resized.owl.carousel', function () {
-    $('.owl-item').css('width', '377px');
-});
+
 
 
 
