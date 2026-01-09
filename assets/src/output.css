@@ -1945,9 +1945,6 @@ header {
   border-color: var(--color-border);
   background-color: var(--color-white);
 }
-#testimonial-slider .owl-item:first-child .testimonial-wrapper {
-  background-color: #ff0000;
-}
 @property --tw-rotate-x {
   syntax: "*";
   inherits: false;

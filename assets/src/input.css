@@ -724,7 +724,3 @@ header {
 .testimonial-wrapper {
     @apply w-[377px] bg-white rounded-lg border-1 border-border;
 }
-#testimonial-slider .owl-item:first-child .testimonial-wrapper {
-  background-color: #ff0000;
-}
-
