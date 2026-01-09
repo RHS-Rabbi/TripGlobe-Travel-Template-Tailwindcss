@@ -695,7 +695,7 @@ header {
     @apply aspect-testimonial-bg object-cover rounded-full;
 }
 .testimonial-right-title{
-    @apply lg:w-126.5
+    @apply lg:w-126.5 w-full;
 }
 .single-testimonial {
     @apply py-6.25 pl-6.25 pr-11.75 flex flex-col gap-4;
@@ -723,4 +723,10 @@ header {
 }
 .testimonial-wrapper {
     @apply w-[377px] bg-white rounded-lg border-1 border-border;
+}
+.testimonial-slider .center .testimonial-wrapper{
+    @apply bg-primary text-white transition-all ease-in-out duration-300;
+}
+.testimonial-slider .center .testimonial-wrapper h4, .testimonial-slider .center .testimonial-wrapper p{
+    @apply text-white
 }

@@ -63,9 +63,10 @@ jQuery(document).ready(function(){
     items: 1,
     autoWidth: true, 
     dots:false,
-    // autoplay: true,
-    // autoplayTimeout: 3000,
-    // autoplayHoverPause: true,
+    center: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
     // responsiveClass:true,
     // responsive:{
     //     0:{
