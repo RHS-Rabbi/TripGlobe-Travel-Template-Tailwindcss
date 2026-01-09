@@ -54,3 +54,35 @@ document.querySelectorAll('.rotate-text').forEach(text => {
 });
 
 
+// Owl-Carousel 
+jQuery(document).ready(function(){
+  $('#testimonial-slider .owl-carousel').owlCarousel({
+    loop:true,
+    margin:16,
+    nav:false,
+    items: 3,
+    // autoplay: true,
+    // autoplayTimeout: 2000,
+    // autoplayHoverPause: true,
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+        },
+        768:{
+            items:2,
+        },
+        1024:{
+            items:3,
+        }
+    }
+  });
+})
+
+$('#testimonial-slider .owl-carousel').on('initialized.owl.carousel resized.owl.carousel', function () {
+    $('.owl-item').css('width', '377px');
+});
+
+
+
+

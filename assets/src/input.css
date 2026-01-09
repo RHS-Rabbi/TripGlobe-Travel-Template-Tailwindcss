@@ -698,5 +698,32 @@ header {
     @apply w-126.5
 }
 .single-testimonial {
-    @apply py-6.25 pl-6.25 pr-11.75 bg-white;
+    @apply py-6.25 pl-6.25 pr-11.75 bg-white flex flex-col gap-4 border-1 border-border rounded-lg;
 }
+.single-testimonial p {
+    @apply text-sm text-body leading-6; 
+}
+.testimonial-rating{
+    @apply flex gap-1;
+}
+.testimonial-user{
+    @apply flex gap-3;
+}
+.testimonial-user img{
+    @apply !size-12 aspect-square object-cover rounded-full;
+}
+.tesimonial-user-info h4{
+    @apply text-base text-primary font-semibold leading-5;
+}
+.tesimonial-user-info p{
+    @apply text-sm leading-6 text-body;
+}
+
+
+/* .testimonial-slider .owl-stage-outer {
+    overflow: visible;
+} */
+
+/* .owl-item {
+    width: 377px !important;
+} */
