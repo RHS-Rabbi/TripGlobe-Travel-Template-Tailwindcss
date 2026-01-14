@@ -724,6 +724,9 @@ header {
 .testimonial-wrapper {
     @apply w-[377px] bg-white rounded-lg border-1 border-border;
 }
+.testomial-bg img{
+    @apply w-full;
+}
 .testimonial-slider .center .testimonial-wrapper{
     @apply bg-primary text-white transition-all ease-in-out duration-300;
 }
@@ -731,3 +734,6 @@ header {
     @apply text-white
 }
 /* -------------------------P Destination-2 Area ------------------------------*/
+.p-destination-2{
+    @apply py-30;
+}
