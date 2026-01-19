@@ -737,3 +737,20 @@ header {
 .p-destination-2{
     @apply py-30;
 }
+.p-destination-2-btn{
+    @apply flex gap-4 md:flex-row flex-wrap justify-center;
+}
+.p-destination-2-btn .active{
+    @apply  border-1 border-primary rounded-full;
+}
+.p-destination-2-btn button{
+    @apply cursor-pointer inline-block py-2.25 px-4.25 text-primary text-base leading-6 font-normal ; 
+}
+
+
+.rabbi {
+    display: grid;
+    gap: 24px;
+    /* grid-template-columns: repeat(3, 1fr); */
+    @apply grid grid-cols-3
+}
