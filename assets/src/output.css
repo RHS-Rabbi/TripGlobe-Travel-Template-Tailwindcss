@@ -685,6 +685,24 @@ header {
       color: var(--color-2);
     }
   }
+  &:focus {
+    border-color: var(--color-2);
+  }
+  &:focus {
+    background-color: var(--color-white);
+  }
+  &:focus {
+    color: var(--color-2);
+  }
+  &:active {
+    border-color: var(--color-2);
+  }
+  &:active {
+    background-color: var(--color-white);
+  }
+  &:active {
+    color: var(--color-2);
+  }
 }
 .mobile-menu ul li a {
   font-size: var(--text-sm);
